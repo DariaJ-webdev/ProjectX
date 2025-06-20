@@ -205,6 +205,8 @@ same visual*/
     display: flex; /* puts it side by side*/
     justify-content: space-between;
     height: 50px;
+/*Added mre spacing below the tiny boxes*/
+    margin-bottom: 24px;
 
 }
 
