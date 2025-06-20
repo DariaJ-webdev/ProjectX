@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="layout1">
+        <p><h2>LAYOUT #1</h2></p>
+        <p>display:flex; justify-content: space-between; align-items: center;</p>
+        <div class="container">
+           <div class="box"></div>
+            <div class="box-wrapper">
+            <div class="box box-small"></div>
+            <div class="box box-small"></div>
+            <div class="box box-small"></div>
+            </div>
+            </div>
+    </section>
+
+    <section id="layout2">
+         <p><h2>LAYOUT #2</h2></p>
+        <p>display:flex; flex-wrap: wrap; justify-content:space-between;</p>
+        <div class="container">
+        <div class="row">
+         <div class="title"></div>
+            <div class="box-wrapper">
+            <div class="box"><p class="centered-paragraph">width: 30%</p></div>
+            <div class="box"><p class="centered-paragraph">width: 30%</p></div>
+            <div class="box"><p class="centered-paragraph">width: 30%</p></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            </div>
+           </div>
+        </div>
+    </section>
+
+    <section id="layout3">
+        <p><h2>LAYOUT #3</h2></p>
+        <p>display:flex; flex-direction:column;</p>
+        <div class="container">
+            <div class="row">
+            <div class="box-wrapper">
+            <div class="box box-small"></div>
+            <div class="box box-small"></div>
+            <div class="box box-small"><p class="centered-paragraph">width:50%</p></div>
+            </div>
+            
+            <div class="box box-large"><p class="centered-paragraph">width:50%</p></div>
+             </div>  
+        </div>
+
+    </section>
+
+    <section id="layout4">
+         <p><h2>LAYOUT #4 - Max Rows</h2></p>
+        <p>.row {width:100%; max-width:1200 px; margin:0 auto;}</p>
+        <div class="container">
+            <div class="row">
+            <div class="box-wrapper">
+                <div class="box box-small"></div>
+                <div class="box box-small"></div>
+            <div class="tiny-wrapper">
+               <div class="box box-tiny"></div>
+                <div class="box box-tiny"></div>
+                <div class="box box-tiny"></div>
+                </div>
+            </div>
+                <div class="box box-large"></div>
+         </div>      
+             
+        
+
+    </section>
+</body>  
+</html>
