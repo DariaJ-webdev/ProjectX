@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css1?family=Lato:wght@400;700&display=swap');
+*{
+font-family: 'Lato', sans-serif;
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+
+}
+
+h1,h2,h3,h4,h5,h6, span {
+color: #242424;
+text-align: center;
+line-height: 1.25;
+}
+
+h1{
+font-size: 36px;
+
+}
+
+a {
+text-decoration: none;
+position: relative;
+}
+
+.link__hover-effect:after {
+content: "";
+position: absolute;   
+height: 3px;
+width: 0;
+bottom: -3px;
+right: 0;
+background-color: #242424;
+transition: all 300ms ease;
+}
+
+.link__hover-effect:hover:after {
+width: 100%; /* Expands the underline across the link */
+left:0;
+}
+
+.link__hover-effect--white:after {
+background-color: #fff;
+
+}
+
+.link__hover-effect--black:after {
+    background-color: #242424;
+
+}
+
+.link__hover-effect:hover:after {
+width: 100%; /* Expands the underline across the link */
+left: 0;
+}
+
+
+
+p {
+
+line-height: 1.5;
+font-size: 16px;
+}
+
+li {
+list-style: none;
+}
+
+.flex {
+display: flex;
+
+}
+
+.flex-1 {
+flex: 1;
+}
+
+.container {
+padding: 50px 0;
+}
+
+
+.row {
+width: 100%;
+max-width: 800px;
+margin: 0 auto;
+padding: 0 12px;
+
+}
+
+.text--burgundy {
+color: #65081f;
+
+}
+
+section:nth-child(even) {
+background-color: #f8f8f8;
+}
+
+.section__title {
+margin-bottom: 16px;
+
+}
+
+/* navigation bar*/
+
+nav {
+height: 100px;
+width: 100%;
+max-width:1000px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 12px;
+}
+
+.nav__link--list {
+display: flex;
+}
+
+.nav__link--anchor {
+margin: 0 12px;
+color: #242424;
+text-decoration: none;
+font-weight: 700;
+}
+
+
+.nav__link--anchor-primary {
+background-color: #65081f;
+padding: 8px 20px; /*top/bottom, left/right*/
+color: white;
+border-radius: 50px;
+transition: all  300ms ease;
+}
+
+.nav__link--anchor-primary:hover {
+    background-color: #9f1025;
+}
+
+.personal__logo {
+font-size: 24px;
+color: #65081f;
+margin: 0 12px;
+font-weight: bold;
+}
+
+/*about me*/
+#about-me {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+.about-me__info {
+display: flex;
+flex-direction: column;
+
+}
+
+.about-me__info--container {
+display: flex;
+flex-direction: column;
+align-items: center;
+max-width: 600px;
+margin: 0 auto;
+text-align: center;
+}
+
+.about-me__photo--mask {
+width: 100px;
+height: 100px;
+border-radius: 50%;
+overflow: hidden;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+margin-bottom: 28px;
+
+}
+
+
+.about-me__photo {
+width:100%;
+
+}
+
+.about-me__info--title {
+margin-bottom: 16px;
+}
+
+ 
+.about-me__info--para {
+font-size: 20px;
+margin-bottom: 28px;
+}
+
+
+.socialm {
+font-size: 20px;
+color: #242424; /*undraw.co/illustrations*/
+text-decoration:none;
+padding: 0 16px;
+}
+
+.socialmda {
+margin: 0 auto;
+padding: 12px 12px;
+   
+}
+
+.about-me__img--container {
+margin-top: 120px;
+margin-bottom: 64px;
+flex: 1;
+display: flex;
+align-items: center;
+}
+
+.about-me__img {
+width: 100%;
+}
+
+
+/*tech stack*/
+
+.language__img {
+width: 100%;
+max-width:100px;
+transition: all 300ms;
+}
+
+.language__img:hover {  /*adds shrink and opacity function*/
+filter: brightness(80%);
+opacity: 0.86;
+transform: scale(0.9);
+}
+
+.language {
+width: 25%;
+display: flex;
+flex-direction: column; /* Added to stack image and text vertically */
+justify-content: center;
+align-items: center; /* centers children horizontally */
+position: relative;
+transition: all 300ms;
+}
+
+.language__img--wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 25px 16px;
+}
+
+.language__list {
+display: flex;
+justify-content: center;
+width: 100%;
+flex-wrap: wrap;
+row-gap: 24px;
+
+}
+
+.language__name {
+ transform: translateX(-50%) scale(0); /* Center horizontally and initially hide */
+ transition: transform 300ms ease, opacity 300ms ease; /* Smooth transition for appearance */
+ opacity: 0; /* Hide initially */
+ white-space: nowrap; /* Prevent text from wrapping */
+ font-size: 20px;
+}
+
+/* On hover of the language div, show the language__name */
+.language:hover .language__name {
+    transform: scale(1); /* Make it visible and keep it centered */
+    opacity: 1; /* Fully visible */
+}
+
+/*Projects*/
+.project__img {
+    width: 100%;
+    transition: all 500ms ease;
+}
+
+.project__wrapper {
+    display: flex;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project__wrapper:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1c1d25;
+    opacity: 0;
+    transition: opacity 450ms ease;
+    z-index: 2;
+}
+
+.project:hover .project__wrapper:before {
+    opacity: 0.7;
+}
+
+.project:hover .project__img {
+    transform: scale(1.07);
+    filter: blur(5px);
+}
+
+.project__list {
+    padding-top: 40px;
+}
+
+.project__description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Base centering */
+    max-width: 550px;
+    z-index: 3;
+    opacity: 0; /* Initially hide the description */
+    transition: opacity 450ms ease, transform .4s ease; /* Add transform to transition */
+    width: 90%;
+}
+
+.project:hover .project__description {
+    opacity: 1;
+    transform: translate(-50%, -60%); /* Moves up by an additional 30% of its height */
+}
+
+
+.project__description--title {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.project__description--sub-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.project__description--para {
+    margin: 16px 0;
+}
+
+.project__description--links {
+    display: flex;
+    justify-content: flex-start; /* Ensures links and icons are left-aligned */
+    gap: 16px;
+    margin-top: 20px;
+    /* 'color: #fff;' removed here and put it in the general rule below */
+    padding-left: 0; /* Ensure no default padding pushes it right */
+}
+
+.project__description--link {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.project__description--title,
+.project__description--sub-title,
+.project__description--para,
+.project__description--link,
+.project__description--links .fa-brands, 
+.project__description--links .fa-solid { 
+    text-align: left; 
+    color: #fff; 
+}
+
+/*footer*/
+
+/*Footer*/
+footer {
+    background-color: #242424;
+    padding: 60px 0; /* Add some padding for better spacing */
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Horizontally centers children in a column layout */
+    justify-content: center;
+    max-width: 800px; /* Ensure your row doesn't exceed this width */
+    margin: 0 auto; /* Centers the row itself */
+    padding: 0 12px; /* Standard padding for content inside the row */
+}
+
+/* Footer Logo and "Top" Arrow Container (the clickable area) */
+.footer__anchor {
+    display: flex; /* Makes the logo and "Top" text sit side-by-side */
+    align-items: center; /* Vertically centers them */
+    justify-content: center; /* This centers the logo and pop-out text relative to each other */
+    gap: 10px; /* Space between logo and "Top" text */
+    text-decoration: none; /* Removes underline from the anchor itself */
+    margin-bottom: 24px; /* Space below the logo/top section */
+    color: #fff; /* Ensures the logo (if text-based) and "Top" text are white */
+}
+
+/* Logo Image Styling */
+.footer__logo--img {
+width: 50%;
+height: auto;
+display: block;
+margin: 0 auto;
+    
+}
+
+/* "Top" Pop-out Text and Arrow */
+.footer__logo--pop {
+opacity: 0; /* Invisible by default */
+transform: translateX(-15px); /* Starts slightly to the left for pop-out effect */
+transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth animation */
+white-space: nowrap; /* Prevents text from wrapping */
+font-size: 16px; /* Adjust as needed */
+color: #fff; /* Ensure it's white */
+}
+
+/* "Top" Pop-out Text and Arrow on Hover */
+.footer__anchor:hover .footer__logo--pop {
+opacity: 1; /* Fully visible on hover */
+transform: translateX(0); /* Slides to its natural position (pop-out) */
+}
+
+
+/* Footer Social Links Container */
+.footer__social--list {
+width: 100%;
+max-width: 500px;
+display: flex; /* Makes the social links side-by-side */
+justify-content: space-around; /* Distributes space evenly between links */
+margin-bottom: 28px; /* Space below the social links */
+}
+
+/* Footer Social Media Individual Links */
+.footersocialmda {
+text-decoration: none; /* Removes default underline */
+color: #fff; /* Ensures text and icons are white */
+font-size: 20px; /* Adjust icon/text size */
+display: flex; /* Make links flex to align icon and text */
+align-items: center; /* Center icon and text vertically */
+gap: 8px; /* Space between icon and text within the link */
+}
+
+/* --- General Link Underline Effect (Applies to Nav and now Footer links) --- */
+/* Base rule for the underline */
+.link__hover-effect:after {
+content: "";
+position: absolute;
+height: 3px;
+width: 0; /* Starts hidden */
+bottom: -3px; /* Positions it below the text */
+left: 0; /* Ensures the underline starts from the left */
+transition: width 300ms ease; /* Smooth animation for width change */
+ 
+}
+
+/* Hover state for the underline */
+.link__hover-effect:hover:after {
+width: 100%; /* Expands the underline across the link on hover */
+}
+
+/* Underline Color for Black Links--nav */
+.link__hover-effect--black:after {
+background-color: #242424; /* Black underline color */
+}
+
+/* Underline Color for White Links-footer */
+.link__hover-effect--white:after {
+background-color: #fff; /* White underline color */
+}
+
+
+/* Footer Copyright Text */
+.footer__copyright {
+display: flex;
+justify-content: center;
+color: #fff;
+font-size: 14px;
+}
+
+/*Small phones, tablets, large smartphones */
+@media (max-width: 768px) {
+nav {
+height: 68px;
+}
+
+h1{
+font-size: 28px;
+}
+
+.about-me__info--para{
+font-size: 18px;
+}
+
+.language {
+width: calc(100%/2);
+}
+
+.project__description--para {
+ font-size:14px;    
+}
+
+.project__description {
+left:30px;
+padding-right: 30px;
+}
+
+
+}
+
+/* small phones*/
+@media (max-width: 480px) {
+
+.nav__link:not(:last-child) {
+display: none;
+}
+
+.project__description {
+opacity:1;
+position: static;
+height: auto;
+padding: 10px;
+background-color: #1c1d25;
+transition:none;
+}
+
+.project__description--para {
+display:none;
+}
+
+.project__description--title,
+.project__description--sub-title {
+display: block;
+color: #fff;
+font-size: 12px;
+margin-bottom: 8px;
+}
+
+.project__description--links {
+display: flex; /* Ensure links are visible and laid out */
+margin-top: 16px; /* Adjust spacing */
+}
+
+
+}
